@@ -34,9 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "peerDependencies": {
-    "react": ">=16.14.0",
-    "react-dom": ">=16.14.0"
   }
 }
