@@ -41,7 +41,6 @@
 .hero--fun-wrapper {
   max-height: 630.77px;
   max-width: 639.3px;
-  background-size: contain;
 }
 
 @media screen and (min-width: 900px) {

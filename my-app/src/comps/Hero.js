@@ -4,6 +4,7 @@ import {
   MouseParallaxContainer,
   MouseParallaxChild,
 } from "react-parallax-mouse";
+
 import wiggles from "../media/wiggles.svg";
 import food from "../media/hero-food.png";
 import ell1 from "../media/hero-food-ellipse-1.svg";
@@ -29,7 +30,10 @@ export default function Hero() {
       <div className="hero--fun-wrapper">
         <MouseParallaxContainer>
           <MouseParallaxChild factorX="{0.03}" factorY="{0.05}">
-            {/* <img src={ell1} alt="" /> */}
+            <img src={ell1} alt="" />
+          </MouseParallaxChild>
+          <MouseParallaxChild factorX="{0.07}" factorY="{0.08}">
+            <img src={ell2} alt="" />
           </MouseParallaxChild>
         </MouseParallaxContainer>
       </div>
