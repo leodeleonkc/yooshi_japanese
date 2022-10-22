@@ -1,0 +1,51 @@
+.hero--wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero--main-title {
+  max-width: 548px;
+}
+
+.hero--main-title h1 {
+  font-size: 6rem;
+  line-height: 1.1;
+}
+
+.hero--main-title h1 :nth-child(1) {
+  font-weight: 400;
+  color: var(--brown);
+}
+
+.hero--main-title h1 :nth-child(2),
+.hero--main-title span :nth-child(1) {
+  color: var(--orange);
+}
+
+.hero--main-title h1 :nth-child(3) {
+  color: var(--brown);
+  background-repeat: no-repeat;
+  background-position: 0 7.1rem;
+}
+.hero--main-title h1 :nth-child(3),
+.hero--main-title span :nth-child(1) {
+  font-weight: 500;
+}
+
+.hero--main-title span :nth-child(2) {
+  color: var(--green);
+}
+
+.hero--fun-wrapper {
+  max-height: 630.77px;
+  max-width: 639.3px;
+  background-size: contain;
+}
+
+@media screen and (min-width: 900px) {
+  .hero--wrapper {
+    flex-direction: row;
+  }
+}

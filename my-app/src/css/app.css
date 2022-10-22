@@ -1,0 +1,9 @@
+.App {
+  max-width: 1200px;
+  border: 4px solid black;
+  border-radius: 37px;
+  background-color: var(--cream);
+  color: var(--main);
+  margin: auto;
+  padding: 3rem;
+}
