@@ -29,12 +29,7 @@ export default function Hero() {
       </div>
 
       <div className="hero--fun-wrapper">
-        <MouseParallaxContainer
-          containerStyles={{
-            position: "relative",
-            width: "100%",
-          }}
-        >
+        <MouseParallaxContainer resetOnLeave>
           <MouseParallaxChild
             factorX={0.01}
             factorY={0.01}
