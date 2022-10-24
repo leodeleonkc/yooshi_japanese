@@ -7,6 +7,7 @@ import {
 
 import wiggles from "../media/wiggles.svg";
 import food from "../media/hero-food.png";
+import splash from "../media/hero-splash.svg";
 import ell1 from "../media/hero-food-ellipse-1.svg";
 import ell2 from "../media/hero-food-ellipse-2.svg";
 import ell3 from "../media/hero-food-ellipse-3.svg";
@@ -28,12 +29,59 @@ export default function Hero() {
       </div>
 
       <div className="hero--fun-wrapper">
-        <MouseParallaxContainer>
-          <MouseParallaxChild factorX="{0.03}" factorY="{0.05}">
+        <MouseParallaxContainer
+          containerStyles={{
+            position: "relative",
+            width: "100%",
+          }}
+        >
+          <MouseParallaxChild
+            factorX={0.01}
+            factorY={0.01}
+            updateStyles={{
+              background: `url(${splash})`,
+              position: "absolute",
+              backgroundRepeat: "no-repeat",
+              maxWidth: "639.3px",
+              width: "100%",
+              height: "100%",
+            }}
+          ></MouseParallaxChild>
+          <MouseParallaxChild
+            factorX={0.09}
+            factorY={0.06}
+            updateStyles={{
+              position: "absolute",
+              left: "5%",
+              top: "75%",
+            }}
+          >
             <img src={ell1} alt="" />
           </MouseParallaxChild>
-          <MouseParallaxChild factorX="{0.07}" factorY="{0.08}">
+          <MouseParallaxChild factorX={0.02} factorY={0.02}>
+            <img src={food} alt="Illustration of a plate of sushi" />
+          </MouseParallaxChild>
+          <MouseParallaxChild
+            factorX={0.07}
+            factorY={0.1}
+            updateStyles={{
+              position: "absolute",
+              right: "5%",
+              top: "15%",
+            }}
+          >
             <img src={ell2} alt="" />
+          </MouseParallaxChild>
+          <MouseParallaxChild
+            factorX={0.05}
+            factorY={0.07}
+            updateStyles={{
+              position: "absolute",
+              right: "3%",
+              top: "5%",
+            }}
+          >
+            <img src={ell3} alt="" />
           </MouseParallaxChild>
         </MouseParallaxContainer>
       </div>
