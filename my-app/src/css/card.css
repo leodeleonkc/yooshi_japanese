@@ -1,0 +1,128 @@
+.card--wrapper {
+  text-align: center;
+  width: 253px;
+  height: 378px;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: var(--darkcream);
+  box-shadow: 4px 4px var(--brown), 4px 4px 0 1px black;
+}
+
+.card--inner {
+  margin: 0.938em;
+}
+
+.card--wrapper img {
+  width: 223px;
+  height: 125px;
+  border: 2px solid black;
+  border-radius: 7px;
+}
+
+.card--wrapper p {
+  font-size: 1.5rem;
+  color: var(--brown);
+  font-weight: 800;
+  margin: 0;
+}
+
+.card--data-small,
+.card--data-medium,
+.card--data-large {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#card--data-size {
+  color: var(--sizes);
+  font-size: 2rem;
+  margin: 0;
+  text-align: center;
+}
+
+#card--data-price {
+  color: var(--main);
+  font-size: 1.563rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+#card--order-btn,
+#card--order-btn-order {
+  width: 93px;
+  height: 29px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px var(--brown);
+  transition-duration: 200ms;
+  font-family: inherit;
+}
+
+#card--order-btn {
+  background-color: var(--orange);
+}
+
+#card--order-btn-order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--green);
+  color: var(--cream);
+}
+
+#card--order-btn:hover {
+  background-color: var(--green);
+  color: var(--cream);
+  cursor: pointer;
+}
+
+#card--order-btn:active {
+  box-shadow: none;
+  transform: translateY(-2px);
+  transform: translateX(2px);
+}
+
+#card--order-ingredients-btn {
+  margin-top: 5px;
+  font-family: inherit;
+  width: 126px;
+  height: 29px;
+  font-size: 0.75rem;
+  font-weight: 300;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: var(--darkcream);
+  box-shadow: 2px 2px var(--brown);
+  transition-duration: 200ms;
+}
+
+#card--order-ingredients-btn:hover {
+  cursor: pointer;
+  background-color: var(--cream);
+}
+#card--order-ingredients-btn:active {
+  transform: translateY(-2px);
+  transform: translateX(2px);
+  box-shadow: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#ingreds {
+  margin-top: 6px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--main);
+  height: 138px;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

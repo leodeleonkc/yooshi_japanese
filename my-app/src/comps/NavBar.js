@@ -7,7 +7,9 @@ export default function NavBar() {
     <div className="navbar--wrapper">
       <img src={logo} alt="Yooshi Japanese Restaurant logo" />
       <div className="navbar--menu-container">
-        <p>Menu</p>
+        <a href="#menu">
+          <p>Menu</p>
+        </a>
         <p>Locations</p>
         <p>Delivery</p>
         <img src={cart} alt="go to cart" />

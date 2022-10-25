@@ -6,7 +6,9 @@
   --cream: #fff5e0;
   --darkcream: #ffe2cd;
   --menu: #bcb3ab;
+  --sizes: #bb3e03;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,7 +19,9 @@ body {
   background-color: var(--green);
   padding: 2rem;
 }
-
+a {
+  text-decoration: none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

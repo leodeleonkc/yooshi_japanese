@@ -1,0 +1,77 @@
+{
+  "menu": [
+    {
+      "item": "Udon",
+      "small": 7.55,
+      "medium": 8.35,
+      "large": 9.65,
+      "url": "https://www.leodeleon.co/yooshi/data/menu-img/menu-udon.jpg",
+      "ingreds": "Thick Fresh Noodles • Olive Oil • Sesame Oil • Minced Ginger • Garlic • Broth • Veggies • Chicken • Miso Paste • Soy Sauce",
+      "id": "udon"
+    },
+    {
+      "item": "Tekoyaki",
+      "small": 7.99,
+      "medium": 8.99,
+      "large": 9.97,
+      "url": "https://www.leodeleon.co/yooshi/data/menu-img/menu-tekoyaki.jpg",
+      "ingreds": "Eggs • Flour • Dashi Powder • Octopus/Tako • Green Onions • Tenkasu • Tekoyaki Sauce • Bonito Flakes • Seaweed • Soy Sauce",
+      "id": "tekoyaki"
+    },
+    {
+      "item": "Onigiri",
+      "small": 6.78,
+      "medium": 7.13,
+      "large": 7.99,
+      "url": "https://www.leodeleon.co/yooshi/data/menu-img/menu-onigiri.jpg",
+      "ingreds": "Koshihikari Rice • Furikake • Nori • Gomashio • Katsuo Fumi",
+      "id": "onigiri"
+    },
+    {
+      "item": "Sukiyaki",
+      "small": 8.55,
+      "medium": 9.37,
+      "large": 10.59,
+      "ingredients": "",
+      "url": "https://www.leodeleon.co/yooshi/data/menu-img/menu-sukiyaki.jpg",
+      "ingreds": "Beef Slices • Shiitake & Enoki Mushrooms • Cabbage • Tong Ho • Scallions • Noodles • Sukuyaki Sauce • Egg Yolk",
+      "id": "Sukiyaki"
+    },
+    {
+      "item": "Sashimi",
+      "small": 9.75,
+      "medium": 10.59,
+      "large": 11.99,
+      "url": "https://www.leodeleon.co/yooshi/data/menu-img/menu-sashimi.jpg",
+      "ingreds": "Ahi Tuna • Salmon • Shrimp • Coriander  • Sesame Seed Oil • Cucumber • Carrot • Avocado • Radish • Black Caviar • Ginger",
+      "id": "sashimi"
+    },
+    {
+      "item": "Sushi",
+      "small": 8.25,
+      "medium": 9.77,
+      "large": 11.15,
+      "url": "https://www.leodeleon.co/yooshi/data/menu-img/menu-sushi.jpg",
+      "ingreds": "Ahi Tuna • Salmon • Shrimp • Rice  • Nori Seaweed • Cucumber • Carrot • Avocado • Tempura • Masago",
+      "id": "susi"
+    },
+    {
+      "item": "Ramen",
+      "small": 7.78,
+      "medium": 8.13,
+      "large": 9.99,
+      "url": "https://www.leodeleon.co/yooshi/data/menu-img/menu-ramen.jpg",
+      "ingreds": "Chicken • Butter • Sesame Oil • Ginger  • Garlic • Broth • Garlic • Shiitake Mushrooms • Mirin • Eggs • Ramen Noodles • Scallions",
+      "id": "ramen"
+    },
+    {
+      "item": "Fried Shrimp",
+      "small": 6.25,
+      "medium": 7.33,
+      "large": 8.15,
+      "url": "https://www.leodeleon.co/yooshi/data/menu-img/menu-fried.jpg",
+      "ingreds": "Devined Shrimp • Sea Salt • Black Pepper • Garlic Powder  • Flour • Paprika • Eggs • Panko Crumbs • Vegetable Oil",
+      "id": "fried"
+    }
+  ]
+}

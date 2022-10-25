@@ -1,9 +1,53 @@
 .menu--wraper {
   padding-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu--wrapper h1 {
+  padding-top: 1em;
   text-align: center;
   font-size: 4rem;
   color: var(--brown);
+}
+
+.menu--card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 3.813em;
+  padding: 2em 0;
+}
+
+.menu--cart-btn {
+  text-align: center;
+  line-height: 3.125rem;
+  color: black;
+  margin: 2em auto;
+  width: 170px;
+  height: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: var(--darkcream);
+  box-shadow: 2px 2px var(--brown);
+  transition-duration: 200ms;
+}
+
+.menu--cart-btn:hover {
+  cursor: pointer;
+  background-color: var(--cream);
+}
+.menu--cart-btn:active {
+  transform: translateY(-2px);
+  transform: translateX(2px);
+  box-shadow: none;
+}
+
+.menu--spacer {
+  padding-bottom: 2em;
 }
