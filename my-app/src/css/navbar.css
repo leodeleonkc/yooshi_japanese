@@ -15,7 +15,7 @@
 }
 
 .navbar--menu-container img {
-  transition-duration: 200ms;
+  transition-duration: 300ms;
 }
 .navbar--menu-container p:hover:after {
   content: "";
@@ -38,6 +38,7 @@
 
 .navbar--menu-container img:hover {
   transform: scale(1.02);
+  transform: rotate(-5deg);
   cursor: pointer;
 }
 
