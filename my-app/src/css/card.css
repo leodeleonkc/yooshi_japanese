@@ -9,6 +9,8 @@
 }
 
 .card--inner {
+  animation: fadeIn 400ms;
+
   margin: 0.938em;
 }
 
@@ -114,11 +116,21 @@
 }
 
 #ingreds {
+  animation: fadeIn 400ms;
   margin-top: 6px;
   font-size: 1rem;
   font-weight: 400;
   color: var(--main);
   height: 138px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .centered {

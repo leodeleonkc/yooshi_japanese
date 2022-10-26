@@ -1,16 +1,20 @@
 import "../css/card.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { Context } from "./context/Context";
 
 export default function Card({ dinner }) {
+  const { addSmall, removeSmall, addMed, removeMed, addLrg, removeLrg } =
+    useContext(Context);
+
   const [smlOrder, setSmlOrder] = useState(false);
   const [medOrder, setMedOrder] = useState(false);
   const [lrgOrder, setLrgOrder] = useState(false);
   const [viewIngreds, setViewIngreds] = useState(false);
 
   const [count, setCount] = useState({
-    sml: 1,
-    med: 1,
-    lrg: 1,
+    sml: 0,
+    med: 0,
+    lrg: 0,
   });
 
   function handlePlus(val) {
@@ -38,45 +42,108 @@ export default function Card({ dinner }) {
           <div className="card--data-small">
             <p id="card--data-size">S</p>
             <p id="card--data-price">${dinner.small}</p>
-            {!smlOrder ? (
-              <button onClick={() => setSmlOrder(true)} id="card--order-btn">
+            {!smlOrder || sml < 1 ? (
+              <button
+                onClick={() => {
+                  setSmlOrder(true);
+                  handlePlus("sml", null);
+                  addSmall(dinner, "small");
+                }}
+                id="card--order-btn"
+              >
                 Order
               </button>
             ) : (
               <button id="card--order-btn-order">
-                <span onClick={() => handleMinus("sml", null)}>-</span>
+                <span
+                  onClick={() => {
+                    handleMinus("sml", null);
+                    removeSmall(dinner, "small");
+                  }}
+                >
+                  -
+                </span>
                 <span>{sml}</span>
-                <span onClick={() => handlePlus("sml", null)}>+</span>
+                <span
+                  onClick={() => {
+                    handlePlus("sml", null);
+                    addSmall(dinner, "small");
+                  }}
+                >
+                  +
+                </span>
               </button>
             )}
           </div>{" "}
           <div className="card--data-medium">
             <p id="card--data-size">M</p>
             <p id="card--data-price">${dinner.medium}</p>
-            {!medOrder ? (
-              <button onClick={() => setMedOrder(true)} id="card--order-btn">
+            {!medOrder || med < 1 ? (
+              <button
+                onClick={() => {
+                  setMedOrder(true);
+                  handlePlus("med", null);
+                  addMed(dinner, "medium");
+                }}
+                id="card--order-btn"
+              >
                 Order
               </button>
             ) : (
               <button id="card--order-btn-order">
-                <span onClick={() => handleMinus("med", null)}>-</span>
+                <span
+                  onClick={() => {
+                    handleMinus("med", null);
+                    removeMed(dinner, "medium");
+                  }}
+                >
+                  -
+                </span>
                 <span>{med}</span>
-                <span onClick={() => handlePlus("med", null)}>+</span>
+                <span
+                  onClick={() => {
+                    handlePlus("med", null);
+                    addMed(dinner, "medium");
+                  }}
+                >
+                  +
+                </span>
               </button>
             )}
           </div>
           <div className="card--data-large">
             <p id="card--data-size">L</p>
             <p id="card--data-price">${dinner.large}</p>
-            {!lrgOrder ? (
-              <button onClick={() => setLrgOrder(true)} id="card--order-btn">
+            {!lrgOrder || lrg < 1 ? (
+              <button
+                onClick={() => {
+                  setLrgOrder(true);
+                  handlePlus("lrg", null);
+                  addLrg(dinner, "large");
+                }}
+                id="card--order-btn"
+              >
                 Order
               </button>
             ) : (
               <button id="card--order-btn-order">
-                <span onClick={() => handleMinus("lrg", null)}>-</span>
+                <span
+                  onClick={() => {
+                    handleMinus("lrg", null);
+                    removeLrg(dinner, "large");
+                  }}
+                >
+                  -
+                </span>
                 <span>{lrg}</span>
-                <span onClick={() => handlePlus("lrg", null)}>+</span>
+                <span
+                  onClick={() => {
+                    handlePlus("lrg", null);
+                    addLrg(dinner, "large");
+                  }}
+                >
+                  +
+                </span>
               </button>
             )}{" "}
           </div>

@@ -4,6 +4,7 @@ import Hero from "./comps/Hero";
 import Menu from "./comps/Menu";
 import WhyUs from "./comps/WhyUs";
 import Footer from "./comps/Footer";
+import Buggy from "./comps/Buggy";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <NavBar />
       <Hero />
       <Menu />
+      <Buggy />
       <WhyUs />
       <Footer />
     </div>
