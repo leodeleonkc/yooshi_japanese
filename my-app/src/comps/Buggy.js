@@ -3,11 +3,8 @@ import { useState, useContext } from "react";
 import { Context } from "./context/Context";
 
 export default function Buggy() {
-  const { addSmall, removeSmall, smallItems, mediumItems, largeItems } =
-    useContext(Context);
-  console.log(smallItems);
-  console.log(mediumItems);
-  console.log(largeItems);
+  const { cart } = useContext(Context);
+  console.log(cart);
   return (
     <section className="buggy--wrapper">
       <p></p>

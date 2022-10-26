@@ -3,8 +3,7 @@ import { useState, useContext } from "react";
 import { Context } from "./context/Context";
 
 export default function Card({ dinner }) {
-  const { addSmall, removeSmall, addMed, removeMed, addLrg, removeLrg } =
-    useContext(Context);
+  const { addItems, removeItems } = useContext(Context);
 
   const [smlOrder, setSmlOrder] = useState(false);
   const [medOrder, setMedOrder] = useState(false);
@@ -47,7 +46,7 @@ export default function Card({ dinner }) {
                 onClick={() => {
                   setSmlOrder(true);
                   handlePlus("sml", null);
-                  addSmall(dinner, "small");
+                  addItems(dinner, "small");
                 }}
                 id="card--order-btn"
               >
@@ -58,7 +57,7 @@ export default function Card({ dinner }) {
                 <span
                   onClick={() => {
                     handleMinus("sml", null);
-                    removeSmall(dinner, "small");
+                    removeItems(dinner, "small");
                   }}
                 >
                   -
@@ -67,7 +66,7 @@ export default function Card({ dinner }) {
                 <span
                   onClick={() => {
                     handlePlus("sml", null);
-                    addSmall(dinner, "small");
+                    addItems(dinner, "small");
                   }}
                 >
                   +
@@ -83,7 +82,7 @@ export default function Card({ dinner }) {
                 onClick={() => {
                   setMedOrder(true);
                   handlePlus("med", null);
-                  addMed(dinner, "medium");
+                  addItems(dinner, "medium");
                 }}
                 id="card--order-btn"
               >
@@ -94,7 +93,7 @@ export default function Card({ dinner }) {
                 <span
                   onClick={() => {
                     handleMinus("med", null);
-                    removeMed(dinner, "medium");
+                    removeItems(dinner, "medium");
                   }}
                 >
                   -
@@ -103,7 +102,7 @@ export default function Card({ dinner }) {
                 <span
                   onClick={() => {
                     handlePlus("med", null);
-                    addMed(dinner, "medium");
+                    addItems(dinner, "medium");
                   }}
                 >
                   +
@@ -119,7 +118,7 @@ export default function Card({ dinner }) {
                 onClick={() => {
                   setLrgOrder(true);
                   handlePlus("lrg", null);
-                  addLrg(dinner, "large");
+                  addItems(dinner, "large");
                 }}
                 id="card--order-btn"
               >
@@ -130,7 +129,7 @@ export default function Card({ dinner }) {
                 <span
                   onClick={() => {
                     handleMinus("lrg", null);
-                    removeLrg(dinner, "large");
+                    removeItems(dinner, "large");
                   }}
                 >
                   -
@@ -139,7 +138,7 @@ export default function Card({ dinner }) {
                 <span
                   onClick={() => {
                     handlePlus("lrg", null);
-                    addLrg(dinner, "large");
+                    addItems(dinner, "large");
                   }}
                 >
                   +
