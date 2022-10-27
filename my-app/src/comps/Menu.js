@@ -1,9 +1,19 @@
 import "../css/menu.css";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 import bg from "../media/menu-bg.svg";
 import Card from "./Card";
+import Basket from "./Basket";
 import menuData from "./data/menu.json";
 
 export default function Menu() {
+  const { viewCart, setViewCart } = useContext(Context);
+
+  function handleCart() {
+    setViewCart(true);
+    document.body.style.overflow = "hidden";
+  }
+
   const CardElements = menuData.menu.map((menu) => {
     return <Card key={menu.id} dinner={menu} />;
   });
@@ -19,8 +29,12 @@ export default function Menu() {
       }}
     >
       <h1>Menu</h1>
+      {viewCart ? <Basket /> : null}
+
       <div className="menu--card-container">{CardElements}</div>
-      <p className="menu--cart-btn">Go To Cart</p>
+      <p className="menu--cart-btn" onClick={handleCart}>
+        Go To Cart
+      </p>
       <div className="menu--spacer"></div>
     </section>
   );

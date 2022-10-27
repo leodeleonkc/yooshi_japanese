@@ -54,6 +54,17 @@
   }
 }
 
+.navbar--item-count {
+  display: flex;
+  align-items: center;
+}
+
+#navbar--how-many-items {
+  position: relative;
+  color: var(--orange);
+  top: -25%;
+}
+
 @media screen and (min-width: 900px) {
   .navbar--menu-container {
     display: flex;

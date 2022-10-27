@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 import { Context } from "./context/Context";
 
 export default function Card({ dinner }) {
-  const { addItems, removeItems } = useContext(Context);
+  const { addItems, removeItems, setHowManyItems } = useContext(Context);
 
   const [smlOrder, setSmlOrder] = useState(false);
   const [medOrder, setMedOrder] = useState(false);
@@ -21,6 +21,7 @@ export default function Card({ dinner }) {
       ...count,
       [val]: count[val] + 1,
     });
+    setHowManyItems((prevState) => prevState + 1);
   }
 
   function handleMinus(val) {
@@ -28,6 +29,7 @@ export default function Card({ dinner }) {
       ...count,
       [val]: count[val] === 0 ? count[val] : count[val] - 1,
     });
+    setHowManyItems((prevState) => prevState - 1);
   }
 
   const { sml, med, lrg } = count;

@@ -3,35 +3,37 @@ import { useState, createContext } from "react";
 const Context = createContext();
 
 function ContextProvider({ children }) {
-  const [cart, setCart] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
+  const [viewCart, setViewCart] = useState(false);
+  const [howManyItems, setHowManyItems] = useState(0);
 
   const addItems = (dinner, iSize) => {
-    const exist = cart.find((x) => x.id === dinner.id && x.size === iSize);
+    const exist = cartItems.find((x) => x.id === dinner.id && x.size === iSize);
     if (exist) {
-      setCart(
-        cart.map((x) =>
+      setCartItems(
+        cartItems.map((x) =>
           x.id === dinner.id && x.size === iSize
             ? { ...exist, qty: exist.qty + 1 }
             : x
         )
       );
     } else {
-      setCart([...cart, { ...dinner, qty: 1, size: iSize }]);
+      setCartItems([...cartItems, { ...dinner, qty: 1, size: iSize }]);
     }
   };
 
   const removeItems = (dinner, iSize) => {
-    const exist = cart.find((x) => x.id === dinner.id && x.size === iSize);
-    let index = cart.indexOf(exist);
+    const exist = cartItems.find((x) => x.id === dinner.id && x.size === iSize);
+    let index = cartItems.indexOf(exist);
     if (exist.qty === 1) {
-      setCart(
-        cart.filter((x) => {
-          return cart.indexOf(x) !== index;
+      setCartItems(
+        cartItems.filter((x) => {
+          return cartItems.indexOf(x) !== index;
         })
       );
     } else {
-      setCart(
-        cart.map((x) =>
+      setCartItems(
+        cartItems.map((x) =>
           x.id === dinner.id && x.size === iSize
             ? { ...exist, qty: exist.qty - 1 }
             : x
@@ -45,7 +47,12 @@ function ContextProvider({ children }) {
       value={{
         addItems,
         removeItems,
-        cart,
+        cartItems,
+        setCartItems,
+        viewCart,
+        setViewCart,
+        howManyItems,
+        setHowManyItems,
       }}
     >
       {children}
