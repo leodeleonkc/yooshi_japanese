@@ -21,8 +21,8 @@
   margin: auto;
   padding: 2em;
   align-items: center;
-  width: 95%;
-  max-width: 668px;
+  width: 100%;
+  max-width: 670px;
   background-color: var(--darkcream);
   border: 3px solid black;
   box-shadow: 5px 5px var(--brown);
@@ -51,6 +51,7 @@
 
 .grid-container {
   display: grid;
+  /* grid-template-columns: auto auto auto auto; */
   grid-template-columns: 100px 200px 150px 150px;
   grid-template-rows: 80px;
   gap: 2rem;
@@ -69,6 +70,11 @@
   width: 100px;
   border: 2px solid black;
   border-radius: 7px;
+}
+
+.basket--tax {
+  padding-top: 1rem;
+  border-top: 1px solid var(--brown);
 }
 
 .basket--continue-shopping {

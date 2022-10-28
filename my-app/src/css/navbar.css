@@ -60,9 +60,12 @@
 }
 
 #navbar--how-many-items {
+  margin: auto;
   position: relative;
-  color: var(--orange);
+  font-size: 0.8rem;
+  color: var(--cream);
   top: -25%;
+  padding: 0.1rem 0.5rem;
 }
 
 @media screen and (min-width: 900px) {

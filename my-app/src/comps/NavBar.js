@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { Context } from "./context/Context";
 import logo from "../media/logo.svg";
 import cart from "../media/cart-empty.svg";
+import countBg from "../media/count-bg.svg";
 
 export default function NavBar() {
   const { howManyItems, setViewCart } = useContext(Context);
@@ -19,7 +20,17 @@ export default function NavBar() {
         <div className="navbar--item-count">
           <img onClick={() => setViewCart(true)} src={cart} alt="go to cart" />
           {howManyItems ? (
-            <h4 id="navbar--how-many-items">{howManyItems}</h4>
+            <h4
+              style={{
+                backgroundImage: `url(${countBg})`,
+                backgroundPosition: `center`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+              }}
+              id="navbar--how-many-items"
+            >
+              {howManyItems}
+            </h4>
           ) : (
             ""
           )}

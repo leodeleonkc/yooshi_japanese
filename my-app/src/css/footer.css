@@ -1,0 +1,20 @@
+.footer--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer--wrapper h1 {
+  padding-top: 1em;
+  text-align: center;
+  font-size: 4rem;
+  color: var(--brown);
+}
+
+#footer--our {
+  font-weight: 400;
+}
+
+.footer--content img {
+  margin: auto;
+}

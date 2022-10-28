@@ -1,0 +1,30 @@
+.whyus--wrapper h1 {
+  padding-top: 1em;
+  text-align: center;
+  font-size: 4rem;
+  color: var(--brown);
+}
+
+#whyus--why {
+  font-weight: 400;
+}
+
+.whyus--content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.whyus--content img {
+  max-width: 450px;
+  width: 100%;
+}
+
+.whyus--text {
+  max-width: 500px;
+}
+
+.whyus--text h2 {
+  color: var(--brown);
+}

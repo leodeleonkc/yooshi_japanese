@@ -103,7 +103,7 @@ export default function Basket() {
                 </div>
               </div>
             ))}
-            <p className="basket--total-price">
+            <p className="basket--total-price basket--tax">
               Tax: <strong>${myTax.toFixed(2)}</strong>
             </p>
             <p className="basket--total-price">
