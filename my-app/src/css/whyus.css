@@ -23,8 +23,11 @@
 
 .whyus--text {
   max-width: 500px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .whyus--text h2 {
+  margin-top: 0;
   color: var(--brown);
 }

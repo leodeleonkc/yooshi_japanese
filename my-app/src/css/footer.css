@@ -3,6 +3,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  /* margin-left: -3em;
+  margin-right: -3em;
+  margin-bottom: -3em; */
+  background: linear-gradient(to bottom, var(--orange) 0%, var(--orange) 100%)
+    no-repeat;
+  background-size: calc(100%) calc(40%);
+  background-position: bottom;
 }
 .footer--wrapper h1 {
   padding-top: 1em;
