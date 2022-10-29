@@ -3,7 +3,7 @@ import whyUs from "../media/whyus_animation.gif";
 
 export default function WhyUs() {
   return (
-    <div className="whyus--wrapper">
+    <div className="whyus--wrapper" id="whyus">
       <h1>
         <span id="whyus--why">Why</span> Us
       </h1>

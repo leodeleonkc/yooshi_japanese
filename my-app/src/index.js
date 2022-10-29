@@ -4,11 +4,13 @@ import { ContextProvider } from "./comps/context/Context";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import Footnote from "./comps/Footnote";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ContextProvider>
     <App />
+    <Footnote />
   </ContextProvider>
 );
 

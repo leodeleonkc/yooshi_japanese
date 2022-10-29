@@ -74,7 +74,6 @@
 
 .basket--tax {
   padding-top: 1rem;
-  border-top: 1px solid var(--brown);
 }
 
 .basket--continue-shopping {
@@ -104,4 +103,9 @@
   100% {
     opacity: 1;
   }
+}
+
+hr {
+  border-top: 1px dotted var(--brown);
+  width: 80%;
 }

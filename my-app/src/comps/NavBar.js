@@ -15,8 +15,12 @@ export default function NavBar() {
         <a href="#menu">
           <p>Menu</p>
         </a>
-        <p>Locations</p>
-        <p>Delivery</p>
+        <a href="#whyus">
+          <p>Why Us?</p>
+        </a>
+        <a href="#locations">
+          <p>Locations</p>
+        </a>{" "}
         <div className="navbar--item-count">
           <img onClick={() => setViewCart(true)} src={cart} alt="go to cart" />
           {howManyItems ? (

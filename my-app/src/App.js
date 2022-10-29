@@ -4,6 +4,7 @@ import Hero from "./comps/Hero";
 import Menu from "./comps/Menu";
 import WhyUs from "./comps/WhyUs";
 import Footer from "./comps/Footer";
+import Footnote from "./comps/Footnote";
 
 export default function App() {
   return (

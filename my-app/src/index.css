@@ -1,3 +1,8 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --brown: #3f2d20;
   --green: #84bd93;
@@ -9,6 +14,7 @@
   --sizes: #bb3e03;
   margin: 0;
   scroll-behavior: smooth;
+  padding: 0;
 }
 
 body {
@@ -17,7 +23,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--green);
-  padding: 2rem;
+  padding: 3rem;
 }
 a {
   text-decoration: none;
