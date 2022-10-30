@@ -1,7 +1,7 @@
 .whyus--wrapper h1 {
   padding-top: 1em;
   text-align: center;
-  font-size: 4rem;
+  font-size: 2rem;
   color: var(--brown);
 }
 
@@ -14,10 +14,12 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  gap: 2rem;
 }
 
 .whyus--content img {
   max-width: 450px;
+  padding-bottom: 3rem;
   width: 100%;
 }
 
@@ -30,4 +32,16 @@
 .whyus--text h2 {
   margin-top: 0;
   color: var(--brown);
+}
+
+@media screen and (min-width: 1024px) {
+  .whyus--wrapper h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 1182px) {
+  .whyus--content img {
+    padding-bottom: 0;
+  }
 }

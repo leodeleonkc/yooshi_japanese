@@ -23,7 +23,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--green);
-  padding: 3rem;
+  padding: 0.5rem;
 }
 a {
   text-decoration: none;
@@ -31,4 +31,10 @@ a {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 3rem;
+  }
 }

@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 3em;
+  gap: 2rem;
 }
 
 .hero--main-title {
@@ -11,7 +12,7 @@
 }
 
 .hero--main-title h1 {
-  font-size: 6rem;
+  font-size: 3rem;
   line-height: 1.1;
 }
 
@@ -28,7 +29,8 @@
 .hero--main-title h1 :nth-child(3) {
   color: var(--brown);
   background-repeat: no-repeat;
-  background-position: 0 7.1rem;
+  background-position: 0 3.5rem;
+  background-size: 12rem;
 }
 .hero--main-title h1 :nth-child(3),
 .hero--main-title span :nth-child(1) {
@@ -50,8 +52,38 @@
   width: 100%;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 769px) {
   .hero--wrapper {
     flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero--main-title h1 {
+    font-size: 4rem;
+  }
+  .hero--main-title h1 :nth-child(3) {
+    color: var(--brown);
+    background-repeat: no-repeat;
+    background-position: 0 4.5rem;
+    background-size: 15rem;
+  }
+  .hero--main-title {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .hero--main-title {
+    max-width: 530px;
+  }
+
+  .hero--main-title h1 {
+    font-size: 6rem;
+  }
+
+  .hero--main-title h1 :nth-child(3) {
+    background-position: 0 7.1rem;
+    background-size: auto;
   }
 }

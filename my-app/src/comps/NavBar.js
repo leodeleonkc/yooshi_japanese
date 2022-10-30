@@ -10,7 +10,7 @@ export default function NavBar() {
 
   return (
     <div id="top" className="navbar--wrapper">
-      <img src={logo} alt="Yooshi Japanese Restaurant logo" />
+      <img className="logo" src={logo} alt="Yooshi Japanese Restaurant logo" />
       <div className="navbar--menu-container">
         <a href="#menu">
           <p>Menu</p>
