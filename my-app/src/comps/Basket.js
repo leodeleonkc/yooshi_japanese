@@ -58,7 +58,7 @@ export default function Basket() {
             <h1>Basket Items</h1>
 
             {cartItems.map((item) => (
-              <div className="basket--full-basket">
+              <div key={item.item} className="basket--full-basket">
                 <div className="grid-container">
                   <div className="grid-item">
                     <img className="basket--img" src={item.url} alt="Food" />
