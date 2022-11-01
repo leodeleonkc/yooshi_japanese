@@ -43,93 +43,98 @@ export default function Basket() {
       className="basket--wrapper"
     >
       <div className="basket--content">
-        {!cartItems.length ? (
-          <div>
-            <h1>Basket is empty 🥢</h1>
-            <p style={{ textAlign: "center", paddingBottom: "2rem" }}>
-              Add some items to your basket and come back!
-            </p>
-            <p className="basket--continue-shopping" onClick={handleClose}>
-              ← Continue Shopping
-            </p>
-          </div>
-        ) : !didOrder && cartItems.length ? (
-          <div>
-            <h1>Basket Items</h1>
+        <div className="basket--fade-anchor">
+          {!cartItems.length ? (
+            <div>
+              <h1>Basket is empty 🥢</h1>
+              <p style={{ textAlign: "center", paddingBottom: "2rem" }}>
+                Add some items to your basket and come back!
+              </p>
+              <p className="basket--continue-shopping" onClick={handleClose}>
+                ← Continue Shopping
+              </p>
+            </div>
+          ) : !didOrder && cartItems.length ? (
+            <div className="basket--inner-content">
+              <div className="basket--fade-top"></div>
 
-            {cartItems.map((item) => (
-              <div key={item.item} className="basket--full-basket">
-                <div className="grid-container">
-                  <div className="grid-item">
-                    <img className="basket--img" src={item.url} alt="Food" />
-                  </div>
-                  <div className="grid-item">
-                    <h2>{item.item}</h2> <p>{item.size}</p>
-                  </div>
-                  <div className="grid-item">
-                    <button
-                      className="basket--qty-btn"
-                      id="card--order-btn-order"
-                    >
-                      <span
-                        onClick={() => {
-                          removeItems(item, item.size);
-                        }}
+              <h1>Basket Items</h1>
+
+              {cartItems.map((item) => (
+                <div key={item.item} className="basket--full-basket">
+                  <div className="grid-container">
+                    <div className="grid-item">
+                      <img className="basket--img" src={item.url} alt="Food" />
+                    </div>
+                    <div className="grid-item">
+                      <h3>{item.item}</h3> <p>{item.size}</p>
+                    </div>
+                    <div className="grid-item">
+                      <button
+                        className="basket--qty-btn"
+                        id="card--order-btn-order"
                       >
-                        -
-                      </span>
-                      <span>{item.qty}</span>
-                      <span
-                        onClick={() => {
-                          addItems(item, item.size);
-                        }}
-                      >
-                        +
-                      </span>
-                    </button>
-                  </div>
-                  <div className="grid-item">
-                    <p className="basket--price">
-                      $
-                      {item.size === "small"
-                        ? (item.small * item.qty).toFixed(2)
-                        : item.size === "medium"
-                        ? (item.medium * item.qty).toFixed(2)
-                        : item.size === "large"
-                        ? (item.large * item.qty).toFixed(2)
-                        : null}
-                    </p>
+                        <span
+                          onClick={() => {
+                            removeItems(item, item.size);
+                          }}
+                        >
+                          -
+                        </span>
+                        <span>{item.qty}</span>
+                        <span
+                          onClick={() => {
+                            addItems(item, item.size);
+                          }}
+                        >
+                          +
+                        </span>
+                      </button>
+                    </div>
+                    <div className="grid-item">
+                      <p className="basket--price">
+                        $
+                        {item.size === "small"
+                          ? (item.small * item.qty).toFixed(2)
+                          : item.size === "medium"
+                          ? (item.medium * item.qty).toFixed(2)
+                          : item.size === "large"
+                          ? (item.large * item.qty).toFixed(2)
+                          : null}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-            <hr />
+              ))}
+              <hr />
 
-            <p className="basket--total-price basket--tax">
-              Tax: <strong>${myTax.toFixed(2)}</strong>
-            </p>
-            <p className="basket--total-price">
-              Total: <strong>${finalPrice.toFixed(2)}</strong>
-            </p>
-            <p className="menu--cart-btn" onClick={() => setDidOrder(true)}>
-              Place Order
-            </p>
-            <p className="basket--continue-shopping" onClick={handleClose}>
-              ← Continue Shopping
-            </p>
-          </div>
-        ) : didOrder ? (
-          <div className="basket--placed-order">
-            <img
-              className="basket--processing-order-img"
-              src={process}
-              alt="Placing order"
-            />
-            <p className="basket--continue-shopping" onClick={handleDone}>
-              ← Go Back
-            </p>
-          </div>
-        ) : null}
+              <p className="basket--total-price basket--tax">
+                Tax: <strong>${myTax.toFixed(2)}</strong>
+              </p>
+              <p className="basket--total-price">
+                Total: <strong>${finalPrice.toFixed(2)}</strong>
+              </p>
+              <p className="menu--cart-btn" onClick={() => setDidOrder(true)}>
+                Place Order
+              </p>
+              <p className="basket--continue-shopping" onClick={handleClose}>
+                ← Continue Shopping
+              </p>
+              <div className="basket--fade-bottom"></div>
+            </div>
+          ) : didOrder ? (
+            <div className="basket--placed-order">
+              <img
+                className="basket--processing-order-img"
+                src={process}
+                alt="Placing order"
+              />
+              <p className="basket--continue-shopping" onClick={handleDone}>
+                ← Go Back
+              </p>
+            </div>
+          ) : null}
+        </div>
       </div>
     </section>
   );

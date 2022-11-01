@@ -17,9 +17,21 @@
   background-position: center;
 }
 
+.basket--fade-anchor {
+  position: relative;
+}
+
+.basket--content::-webkit-scrollbar {
+  display: none;
+}
+
 .basket--content {
+  max-height: 750px;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   margin: auto;
-  padding: 1em;
+  padding: 0 1.8em;
   align-items: center;
   width: 100%;
   max-width: 300px;
@@ -28,6 +40,7 @@
   box-shadow: 5px 5px var(--brown);
   border-radius: 37px;
   transition-duration: 200ms;
+  position: relative;
 }
 
 .basket--content h1 {
@@ -35,8 +48,36 @@
   margin-top: 0;
 }
 
+.basket--fade-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 3rem;
+  width: 100%;
+  background: -webkit-linear-gradient(transparent, var(--darkcream));
+  background: -o-linear-gradient(var(--darkcream), transparent);
+  background: -moz-linear-gradient(var(--darkcream), transparent);
+  background: linear-gradient(var(--darkcream), transparent);
+}
+
+.basket--fade-bottom {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  height: 3rem;
+  width: 100%;
+  background: -webkit-linear-gradient(transparent, var(--darkcream));
+  background: -o-linear-gradient(transparent, var(--darkcream));
+  background: -moz-linear-gradient(transparent, var(--darkcream));
+  background: linear-gradient(transparent, var(--darkcream));
+}
+
 .grid-item img {
   max-width: 94px;
+}
+
+.grid-item h3 {
+  margin: 0 auto 0 auto;
 }
 
 .basket--price {
@@ -57,8 +98,8 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 8.5rem);
-  grid-template-rows: repeat(2, 4.5rem);
-  gap: 1rem;
+  grid-template-rows: repeat(2, 4rem);
+  gap: 0;
   justify-self: center;
   transition-duration: 200ms;
 }
@@ -123,12 +164,12 @@ hr {
 
 @media screen and (min-width: 668px) {
   .basket--content {
-    padding: 2em;
+    padding: 0, 2em;
     width: 100%;
     max-width: 400px;
   }
   .grid-container {
-    grid-template-columns: repeat(2, 12rem);
+    grid-template-columns: repeat(2, 10rem);
     grid-template-rows: repeat(2, 3.5rem);
     gap: 0.5rem;
   }
@@ -136,15 +177,14 @@ hr {
 
 @media screen and (min-width: 1024px) {
   .basket--content {
-    padding: 2em;
     max-width: 650px;
   }
 
   .grid-container {
     display: grid;
-    grid-template-columns: 120px 150px 150px 100px;
-    grid-template-rows: 100px;
-    gap: 3rem;
+    grid-template-columns: 100px 200px 150px 100px;
+    grid-template-rows: 80px;
+    gap: 2rem;
   }
 
   .grid-item img {
