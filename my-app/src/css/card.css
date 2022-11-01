@@ -37,14 +37,14 @@
 }
 
 #card--data-size {
-  color: var(--sizes);
+  color: var(--sizes) !important;
   font-size: 2rem;
   margin: 0;
   text-align: center;
 }
 
 #card--data-price {
-  color: var(--main);
+  color: var(--main) !important;
   font-size: 1.563rem;
   font-weight: 400;
   margin: 0;
@@ -64,7 +64,7 @@
 }
 
 #card--order-btn {
-  background-color: var(--orange);
+  background-color: var(--orange) !important;
 }
 
 #card--order-btn-order {
