@@ -1,4 +1,5 @@
 import "../css/hero.css";
+import hero from "../media/hero-img-mobile.png";
 
 import {
   MouseParallaxContainer,
@@ -27,7 +28,9 @@ export default function Hero() {
           🥢
         </h1>
       </div>
-
+      <div id="hero--img-mobile">
+        <img src={hero} alt="A plate of delicious sushi" />
+      </div>
       <div className="hero--fun-wrapper">
         <MouseParallaxContainer resetOnLeave>
           <MouseParallaxChild

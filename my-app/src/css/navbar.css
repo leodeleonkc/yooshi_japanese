@@ -28,13 +28,12 @@
   z-index: 5;
   position: absolute;
   transform: translateX(20px);
-  width: 70%;
+  width: 50%;
   top: 10;
-  right: -3px;
+  right: 4rem;
   padding: 3rem;
   background-color: var(--green);
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
+  border-radius: 2rem;
   border: 3px solid black;
   box-shadow: -6px 6px var(--brown), -6px 6px 0 1px black;
 }

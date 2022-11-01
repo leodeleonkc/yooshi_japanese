@@ -44,7 +44,11 @@ export default function NavBar() {
         </div>
       </div>
       <div className="navbar--hamburger">
-        <Hamburger toggled={mobileMenu} toggle={toggleMobileMenu} />
+        <Hamburger
+          color="#3f2d20"
+          toggled={mobileMenu}
+          toggle={toggleMobileMenu}
+        />
       </div>
       {mobileMenu ? (
         <div className="navbar--menu-container-mobile">

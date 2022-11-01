@@ -1,5 +1,7 @@
 import "../css/footer.css";
 import map from "../media/footer-map.png";
+import mapMobile from "../media/footer-map-mobile.png";
+
 import logoOutline from "../media/logo-outline.svg";
 
 export default function Footer() {
@@ -10,6 +12,7 @@ export default function Footer() {
           <span id="footer--our">Our</span> Locations
         </h1>
         <img id="footer--map-img" src={map} alt="Locations map" />
+        <img id="footer--map-img-mobile" src={mapMobile} alt="Locations map" />
       </div>
       <div className="footer--info">
         <div className="footer--col1">

@@ -8,7 +8,7 @@
   margin: 0 -3em -3em -3em;
   background: linear-gradient(to bottom, var(--orange) 0%, var(--orange) 100%)
     no-repeat;
-  background-size: calc(100%) calc(80%);
+  background-size: calc(100%) calc(75%);
   background-position: bottom;
 }
 .footer--wrapper h1 {
@@ -28,19 +28,27 @@
 }
 
 #footer--map-img {
-  display: flex;
+  display: none;
   margin: auto;
   max-width: 1079px;
   width: 90%;
-  /* padding: 0 3rem 0 3rem; */
+}
+
+#footer--map-img-mobile {
+  display: flex;
+  margin: auto;
+  max-width: 594px;
+  width: 90%;
 }
 
 .footer--info {
-  margin: 8rem 3rem 3rem 3rem;
   display: flex;
+  margin: auto;
+  padding: 8rem 0 3rem 0;
+  flex-direction: column;
   text-align: center;
-  flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem;
   max-width: 1250px;
   width: 100%;
 }
@@ -49,14 +57,14 @@
 .footer--col2 p,
 .footer--col3 p {
   color: var(--cream);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .footer--col1,
 .footer--col2,
 .footer--col3 {
-  max-width: 227px;
-  margin: 0 3rem 0 3rem;
+  /* max-width: 227px; */
+  margin: 0 1.5rem 0 1.5rem;
 }
 
 .footer--col3 span {
@@ -77,16 +85,51 @@
   padding: 1rem 0;
 }
 
+@media screen and (min-width: 768px) {
+  .footer--wrapper {
+    background-size: calc(100%) calc(66%);
+  }
+
+  .footer--col1,
+  .footer--col2,
+  .footer--col3 {
+    margin: 0 3rem 0 3rem;
+  }
+
+  .footer--info {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1250px;
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 1024px) {
+  #footer--map-img {
+    display: flex;
+  }
+
+  #footer--map-img-mobile {
+    display: none;
+  }
+
   .footer--wrapper h1 {
     font-size: 4rem;
   }
   .footer--wrapper {
-    background-size: calc(100%) calc(55%);
+    background-size: calc(100%) calc(58%);
   }
   .footer--info {
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+  .footer--col1,
+  .footer--col2,
+  .footer--col3 {
+    max-width: 227px;
+    margin: 0 1.5rem 0 1.5rem;
   }
 }
