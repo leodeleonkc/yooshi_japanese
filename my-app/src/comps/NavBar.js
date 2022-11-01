@@ -45,6 +45,7 @@ export default function NavBar() {
       </div>
       <div className="navbar--hamburger">
         <Hamburger
+          duration={0.1}
           color="#3f2d20"
           toggled={mobileMenu}
           toggle={toggleMobileMenu}
