@@ -26,7 +26,7 @@
 }
 
 .basket--content {
-  max-height: 750px;
+  max-height: 550px;
   overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -178,6 +178,7 @@ hr {
 @media screen and (min-width: 1024px) {
   .basket--content {
     max-width: 650px;
+    max-height: 750px;
   }
 
   .grid-container {

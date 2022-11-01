@@ -52,20 +52,21 @@
 
 #card--order-btn,
 #card--order-btn-order {
+  color: var(--brown);
   width: 93px;
   height: 29px;
   font-size: 0.875rem;
   font-weight: 600;
   border: 1px solid black;
   border-radius: 10px;
-  box-shadow: 2px 2px var(--brown) !important;
+  box-shadow: 2px 2px var(--brown);
   transition-duration: 200ms;
   font-family: inherit;
   margin: 0;
 }
 
 #card--order-btn {
-  background-color: var(--orange) !important;
+  background-color: var(--orange);
 }
 
 #card--order-btn-order {
@@ -89,6 +90,7 @@
 }
 
 #card--order-ingredients-btn {
+  color: var(--brown);
   margin-top: 5px;
   font-family: inherit;
   width: 126px;
@@ -110,6 +112,20 @@
   transform: translateY(-2px);
   transform: translateX(2px);
   box-shadow: none;
+}
+
+.card--bottom-of {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#card--basket-img {
+  width: 1.6rem;
+  height: 1.6rem;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .hidden {
@@ -138,4 +154,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  #card--basket-img {
+    display: none;
+  }
 }

@@ -5,6 +5,10 @@
   justify-content: center;
 }
 
+.menu a {
+  color: var(--brown);
+}
+
 .menu--wrapper h1 {
   padding-top: 1em;
   text-align: center;

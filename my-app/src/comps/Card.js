@@ -1,9 +1,11 @@
 import "../css/card.css";
 import { useState, useContext } from "react";
 import { Context } from "./context/Context";
+import cart from "../media/cart-empty.svg";
 
 export default function Card({ dinner }) {
-  const { addItems, removeItems, setHowManyItems } = useContext(Context);
+  const { addItems, removeItems, setHowManyItems, setViewCart } =
+    useContext(Context);
 
   const [smlOrder, setSmlOrder] = useState(false);
   const [medOrder, setMedOrder] = useState(false);
@@ -152,12 +154,20 @@ export default function Card({ dinner }) {
         <div className={!viewIngreds ? "hidden" : "centered"}>
           <p id="ingreds">{dinner.ingreds}</p>
         </div>
-        <button
-          onClick={() => setViewIngreds(!viewIngreds)}
-          id="card--order-ingredients-btn"
-        >
-          Ingredients
-        </button>
+        <div className="card--bottom-of">
+          <button
+            onClick={() => setViewIngreds(!viewIngreds)}
+            id="card--order-ingredients-btn"
+          >
+            Ingredients
+          </button>
+          <img
+            onClick={() => setViewCart(true)}
+            id="card--basket-img"
+            src={cart}
+            alt="Go to Basket"
+          />
+        </div>
       </div>
     </section>
   );

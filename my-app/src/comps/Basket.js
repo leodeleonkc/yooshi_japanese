@@ -57,6 +57,9 @@ export default function Basket() {
           ) : !didOrder && cartItems.length ? (
             <div className="basket--inner-content">
               <div className="basket--fade-top"></div>
+              <p className="basket--continue-shopping" onClick={handleClose}>
+                ← Continue Shopping
+              </p>
 
               <h1>Basket Items</h1>
 
