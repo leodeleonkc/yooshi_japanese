@@ -10,12 +10,12 @@
       "id": "udon"
     },
     {
-      "item": "Tekoyaki",
+      "item": "Takoyaki",
       "small": 7.99,
       "medium": 8.99,
       "large": 9.97,
       "url": "https://www.leodeleon.co/yooshi/data/menu-img/menu-tekoyaki.jpg",
-      "ingreds": "Eggs • Flour • Dashi Powder • Octopus/Tako • Green Onions • Tenkasu • Tekoyaki Sauce • Bonito Flakes • Seaweed • Soy Sauce",
+      "ingreds": "Eggs • Flour • Dashi Powder • Octopus/Tako • Green Onions • Tenkasu • Takoyaki Sauce • Bonito Flakes • Seaweed • Soy Sauce",
       "id": "tekoyaki"
     },
     {

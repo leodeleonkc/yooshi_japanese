@@ -179,7 +179,6 @@ hr {
 @media screen and (min-width: 1024px) {
   .basket--content {
     max-width: 650px;
-    min-height: 550px;
     max-height: 750px;
   }
 

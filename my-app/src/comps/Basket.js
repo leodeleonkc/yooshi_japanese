@@ -45,7 +45,7 @@ export default function Basket() {
       <div className="basket--content">
         <div className="basket--fade-anchor">
           {!cartItems.length ? (
-            <div>
+            <div className="basket--empty-basket">
               <h1>Basket is empty 🥢</h1>
               <p style={{ textAlign: "center", paddingBottom: "2rem" }}>
                 Add some items to your basket and come back!

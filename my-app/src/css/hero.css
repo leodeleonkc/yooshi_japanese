@@ -15,6 +15,7 @@
 .hero--main-title h1 {
   font-size: 3rem;
   line-height: 1.1;
+  text-align: center;
 }
 
 .hero--main-title h1 :nth-child(1) {
@@ -63,6 +64,10 @@
 @media screen and (min-width: 769px) {
   .hero--wrapper {
     flex-direction: row;
+  }
+
+  .hero--main-title h1 {
+    text-align: left;
   }
 }
 
