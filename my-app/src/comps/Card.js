@@ -1,10 +1,12 @@
 import "../css/card.css";
+import "../css/navbar.css";
 import { useState, useContext } from "react";
 import { Context } from "./context/Context";
 import cart from "../media/cart-empty.svg";
+import countBg from "../media/count-bg.svg";
 
 export default function Card({ dinner }) {
-  const { addItems, removeItems, setHowManyItems, setViewCart } =
+  const { addItems, removeItems, setHowManyItems, handleCart, howManyItems } =
     useContext(Context);
 
   const [smlOrder, setSmlOrder] = useState(false);
@@ -161,12 +163,30 @@ export default function Card({ dinner }) {
           >
             Ingredients
           </button>
-          <img
-            onClick={() => setViewCart(true)}
-            id="card--basket-img"
-            src={cart}
-            alt="Go to Basket"
-          />
+          <div className="card--item-count">
+            <img
+              id="card--basket-img"
+              onClick={handleCart}
+              src={cart}
+              alt="go to cart"
+            />
+            {howManyItems ? (
+              <h4
+                onClick={handleCart}
+                style={{
+                  backgroundImage: `url(${countBg})`,
+                  backgroundPosition: `center`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "contain",
+                }}
+                id="card--how-many-items"
+              >
+                {howManyItems}
+              </h4>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
       </div>
     </section>

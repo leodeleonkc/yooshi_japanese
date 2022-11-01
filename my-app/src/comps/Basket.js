@@ -57,7 +57,10 @@ export default function Basket() {
           ) : !didOrder && cartItems.length ? (
             <div className="basket--inner-content">
               <div className="basket--fade-top"></div>
-              <p className="basket--continue-shopping" onClick={handleClose}>
+              <p
+                className="basket--continue-shopping hide"
+                onClick={handleClose}
+              >
                 ← Continue Shopping
               </p>
 
@@ -65,14 +68,14 @@ export default function Basket() {
 
               {cartItems.map((item) => (
                 <div key={item.item} className="basket--full-basket">
-                  <div className="grid-container">
-                    <div className="grid-item">
+                  <div className="basket--grid-container">
+                    <div className="basket--grid-item">
                       <img className="basket--img" src={item.url} alt="Food" />
                     </div>
-                    <div className="grid-item">
+                    <div className="basket--grid-item">
                       <h3>{item.item}</h3> <p>{item.size}</p>
                     </div>
-                    <div className="grid-item">
+                    <div className="basket--grid-item">
                       <button
                         className="basket--qty-btn"
                         id="card--order-btn-order"
@@ -94,7 +97,7 @@ export default function Basket() {
                         </span>
                       </button>
                     </div>
-                    <div className="grid-item">
+                    <div className="basket--grid-item">
                       <p className="basket--price">
                         $
                         {item.size === "small"

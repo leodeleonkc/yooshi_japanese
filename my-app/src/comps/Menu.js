@@ -7,12 +7,7 @@ import Basket from "./Basket";
 import menuData from "./data/menu.json";
 
 export default function Menu() {
-  const { viewCart, setViewCart } = useContext(Context);
-
-  function handleCart() {
-    setViewCart(true);
-    document.body.style.overflow = "hidden";
-  }
+  const { viewCart, handleCart } = useContext(Context);
 
   const CardElements = menuData.menu.map((menu) => {
     return <Card key={menu.id} dinner={menu} />;

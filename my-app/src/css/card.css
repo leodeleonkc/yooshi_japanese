@@ -120,12 +120,28 @@
   align-items: center;
 }
 
+.card--item-count {
+  display: flex;
+  align-items: center;
+}
+
 #card--basket-img {
   width: 1.6rem;
   height: 1.6rem;
   border: none;
   margin: 0;
   padding: 0;
+  cursor: pointer;
+}
+
+#card--how-many-items {
+  margin: auto;
+  position: relative;
+  font-size: 0.6rem;
+  color: var(--cream);
+  top: -25%;
+  left: -18%;
+  padding: 0.1rem 0.5rem;
 }
 
 .hidden {
@@ -157,7 +173,8 @@
 }
 
 @media screen and (min-width: 1024px) {
-  #card--basket-img {
+  #card--basket-img,
+  .card--item-count {
     display: none;
   }
 }

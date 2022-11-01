@@ -1,23 +1,22 @@
 .navbar--wrapper {
   margin-top: -0.7em;
   display: flex;
-  flex-direction: column;
+  flex-direction: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1em;
+  align-items: flex-start;
 }
 
 .logo {
-  width: 150px;
+  width: 100px;
 }
 
 .navbar--menu-container {
-  display: flex;
+  display: none;
   justify-content: space-between;
 }
 
 .navbar--menu-container p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding-right: 2rem;
   font-weight: 700;
   color: var(--menu);
@@ -25,9 +24,39 @@
   cursor: pointer;
 }
 
+.navbar--menu-container-mobile {
+  z-index: 5;
+  position: absolute;
+  transform: translateX(20px);
+  width: 70%;
+  top: 10;
+  right: -3px;
+  padding: 3rem;
+  background-color: var(--green);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border: 3px solid black;
+  box-shadow: -6px 6px var(--brown), -6px 6px 0 1px black;
+}
+
+.navbar--hamburger {
+  z-index: 10;
+}
+
+.navbar--menu-container-mobile p {
+  font-size: 2.5rem;
+  text-align: left;
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 2rem;
+  transition-duration: 300ms;
+  cursor: pointer;
+}
+
 .navbar--menu-container img {
   transition-duration: 300ms;
-  width: 1rem;
+  width: 1.6rem;
+  height: 1.6rem;
 }
 .navbar--menu-container p:hover:after {
   content: "";
@@ -44,7 +73,8 @@
   border-radius: 10rem;
 }
 
-.navbar--menu-container p:hover {
+.navbar--menu-container p:hover,
+.navbar--menu-container-mobile p:active {
   color: var(--brown);
 }
 
@@ -69,6 +99,16 @@
 .navbar--item-count {
   display: flex;
   align-items: center;
+  width: 3rem;
+}
+
+#navbar--how-many-items-mobile {
+  margin: -5px auto auto auto;
+  position: relative;
+  font-size: 0.8rem;
+  color: var(--cream);
+  left: -20%;
+  padding: 0.1rem 0.5rem;
 }
 
 #navbar--how-many-items {
@@ -89,15 +129,20 @@
 
 @media screen and (min-width: 1024px) {
   .navbar--wrapper {
-    flex-direction: row;
+    align-items: center;
   }
   .logo {
     width: 160px;
   }
-
-  .navbar--menu-container p {
-    font-size: 1rem;
+  .navbar--menu-container {
+    display: flex;
   }
+
+  .navbar--menu-container-mobile,
+  .navbar--hamburger {
+    display: none;
+  }
+
   .navbar--menu-container img {
     width: 1.3rem;
   }

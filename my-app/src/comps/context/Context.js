@@ -7,6 +7,11 @@ function ContextProvider({ children }) {
   const [viewCart, setViewCart] = useState(false);
   const [howManyItems, setHowManyItems] = useState(0);
 
+  function handleCart() {
+    setViewCart(true);
+    document.body.style.overflow = "hidden";
+  }
+
   const addItems = (dinner, iSize) => {
     const exist = cartItems.find((x) => x.id === dinner.id && x.size === iSize);
     if (exist) {
@@ -53,6 +58,7 @@ function ContextProvider({ children }) {
         setViewCart,
         howManyItems,
         setHowManyItems,
+        handleCart,
       }}
     >
       {children}
