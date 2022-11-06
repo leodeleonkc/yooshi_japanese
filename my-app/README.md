@@ -25,8 +25,6 @@ My goal was to create a micro-ecommerce type web app.
  - Add an about-us section to showcase the team behind the restaurant.
 
 
-# Getting Started with Create React App
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
