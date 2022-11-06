@@ -8,7 +8,7 @@ My goal was to create a micro-ecommerce type web app.
 ## How to navigate this project
 
  - useContext stateful logic: <a href="https://github.com/leodeleonkc/yooshi_japanese/blob/912c938d98a82876a1b1ca496d332ea4ee3b98d1/my-app/src/comps/context/Context.js">sample code</a>
- - Responsive CSS: <a href="https://github.com/leodeleonkc/yooshi_japanese/blob/912c938d98a82876a1b1ca496d332ea4ee3b98d1/my-app/src/css/hero.css">Sample Code</a>
+ - Responsive CSS: <a href="https://github.com/leodeleonkc/yooshi_japanese/blob/912c938d98a82876a1b1ca496d332ea4ee3b98d1/my-app/src/css/hero.css">sample code</a>
  - The web app fetches data from a local JSON: Example of <a href="https://github.com/leodeleonkc/yooshi_japanese/blob/912c938d98a82876a1b1ca496d332ea4ee3b98d1/my-app/src/comps/Card.js">data transformation</a>.
  - The web app handles arrays in non-conventional ways, like when multiple sizes of one particular item are present <a href="https://github.com/leodeleonkc/yooshi_japanese/blob/912c938d98a82876a1b1ca496d332ea4ee3b98d1/my-app/src/comps/context/Context.js">sample code, line 30</a>.
 
